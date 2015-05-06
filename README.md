@@ -1,5 +1,7 @@
 ## Authoring Style Guide
 
+[![Join the chat at https://gitter.im/Inouit/styleguide](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Inouit/styleguide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Whether you’re writing a chapter, a research document, or a something else, this style guide will cover some grammar basics and standards for writing engaging content.
 
 ## Tone
