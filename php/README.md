@@ -1,58 +1,26 @@
 # PHP guidelines
 
-- [Overview](#1-overview)
-- [General](#2-general)
-  + [Files](#2-1-files)
-  + [Lines](#2-2-lines)
-  + [Indenting](#2-3-indenting)
-  + [Keywords and True/False/Null](#2-4-keywords-and-true-false-null)
-- [Namespace and Use Declarations](#3-namespace-and-use-declarations)
-- [Classes, Properties, and Methods](#4-classes-properties-and-methods)
-- [Control Structures](#5-control-structures)
-- [Closures](#6-closures)
-- [Comments and documentation blocks](#7-comments-and-documentation-blocks)
-- [Exemple](#8-exemple)
-  + [Class](#8-1-class)
+- [1. General](#1-general)
+  + [1.1. Files](#1-1-files)
+  + [1.2. Lines](#1-2-lines)
+  + [1.3. Indenting](#1-3-indenting)
+  + [1.4. Keywords and True/False/Null](#1-4-keywords-and-true-false-null)
+- [2. Namespace and Use Declarations](#2-namespace-and-use-declarations)
+- [3. Classes, Properties, and Methods](#3-classes-properties-and-methods)
+- [4. Control Structures](#4-control-structures)
+- [5. Closures](#5-closures)
+- [6. Comments and documentation blocks](#6-comments-and-documentation-blocks)
+- [7. Exemple](#7-exemple)
+  + [7.1. Class](#7-1-class)
 
 
-## 1. Overview
+## 1. General
 
-Files MUST use only `<?php` tag.
+### 1.1. Files
 
-Files MUST use only UTF-8 without BOM for PHP code.
+Only UTF-8 without BOM.
 
-Code MUST use 4 spaces for indenting, not tabs.
-
-Class names MUST be declared in `StudlyCaps`.
-
-Class constants MUST be declared in all upper case with underscore separators.
-
-Method names MUST be declared in `camelCase`.
-
-There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.
-
-There MUST be one blank line after the `namespace` declaration, and there MUST be one blank line after the block of `use` declarations.
-
-Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.
-
-Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.
-
-Visibility `public`, `protected` and `private` MUST be declared on all properties and methods; `abstract` and `final` MUST be declared before the visibility; `static` MUST be declared after the visibility.
-
-Control structure keywords MUST have one space after them; method and function calls MUST NOT.
-
-Opening braces for control structures MUST go on the same line, and closing braces MUST go on the next line after the body.
-
-Opening parentheses for control structures MUST NOT have a space after them, and closing parentheses for control structures MUST NOT have a space before.
-
-
-## 2. General
-
-### 2.1. Files
-
-PHP code MUST use only UTF-8 without BOM.
-
-PHP code MUST use the long `<?php ?>` tag; it MUST NOT use the other tag variations.
+Use the long `<?php ?>` tag; it MUST NOT use the other tag variations.
 
 All PHP files MUST use the Unix LF (linefeed) line ending.
 
@@ -60,37 +28,28 @@ All PHP files MUST end with a single blank line.
 
 The closing `?>` tag MUST be omitted from files containing only PHP.
 
-### 2.2. Lines
+### 1.2. Lines
 
-There MUST NOT be a hard limit on line length.
-
-The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit.
+The soft limit on line length MUST be 120 characters.
 
 Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines of no more than 80 characters each.
 
-There MUST NOT be trailing whitespace at the end of non-blank lines.
+Remove trailing spaces
 
 Blank lines MAY be added to improve readability and to indicate related blocks of code.
 
-There MUST NOT be more than one statement per line.
+### 1.3. Indenting
 
-### 2.3. Indenting
+Code MUST use 4 spaces for indenting, not tabs.
 
-Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
-
-> N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
-> problems with diffs, patches, history, and annotations. The use of spaces
-> also makes it easy to insert fine-grained sub-indentation for inter-line 
-> alignment.
-
-### 2.4. Keywords and True/False/Null
-
-PHP [keywords](http://php.net/manual/en/reserved.keywords.php) MUST be in lower case.
+### 1.4. Keywords and True/False/Null
 
 The PHP constants `true`, `false`, and `null` MUST be in lower case.
 
+PHP [keywords](http://php.net/manual/en/reserved.keywords.php) MUST be in lower case.
 
-## 3. Namespace and Use Declarations
+
+## 2. Namespace and Use Declarations
 When present, there MUST be one blank line after the `namespace` declaration.
 
 When present, all `use` declarations MUST go after the `namespace`
@@ -115,11 +74,11 @@ use OtherVendor\OtherPackage\BazClass;
 ```
 
 
-## 4. Classes, Properties and Methods
+## 3. Classes, Properties and Methods
 
 The term "class" refers to all classes, interfaces, and traits.
 
-### 4.1. Extends and Implements
+### 3.1. Extends and Implements
 
 The `extends` and `implements` keywords MUST be declared on the same line as the class name.
 
@@ -158,7 +117,7 @@ class ClassName extends ParentClass implements
 }
 ```
 
-### 4.2. Properties
+### 3.2. Properties
 
 Visibility MUST be declared on all properties.
 
@@ -180,7 +139,7 @@ class ClassName
 }
 ```
 
-### 4.3. Methods
+### 3.3. Methods
 
 Visibility MUST be declared on all methods.
 
@@ -203,7 +162,7 @@ class ClassName
 }
 ```    
 
-### 4.4. Method Arguments
+### 3.4. Method Arguments
 
 In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
 
@@ -242,7 +201,7 @@ class ClassName
 }
 ```
 
-### 4.5. `abstract`, `final`, and `static`
+### 3.5. `abstract`, `final`, and `static`
 
 When present, the `abstract` and `final` declarations MUST precede the visibility declaration.
 
@@ -265,7 +224,7 @@ abstract class ClassName
 }
 ```
 
-### 4.6. Method and Function Calls
+### 3.6. Method and Function Calls
 
 When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
 
@@ -288,7 +247,7 @@ $foo->bar(
 ```
 
 
-## 5. Control Structures
+## 4. Control Structures
 
 The general style rules for control structures are as follows:
 
@@ -302,7 +261,7 @@ The general style rules for control structures are as follows:
 The body of each structure MUST be enclosed by braces. This standardizes how the structures look, and reduces the likelihood of introducing errors as new lines get added to the body.
 
 
-### 5.1. `if`, `elseif`, `else`
+### 4.1. `if`, `elseif`, `else`
 
 An `if` structure looks like the following. Note the placement of parentheses, spaces, and braces; and that `else` and `elseif` are on the same line as the closing brace from the earlier body.
 
@@ -320,7 +279,7 @@ if ($expr1) {
 The keyword `elseif` SHOULD be used instead of `else if` so that all control keywords look like single words.
 
 
-### 5.2. `switch`, `case`
+### 4.2. `switch`, `case`
 
 A `switch` structure looks like the following. Note the placement of parentheses, spaces, and braces. The `case` statement MUST be indented once from `switch`, and the `break` keyword (or other terminating keyword) MUST be indented at the same level as the `case` body. There MUST be a comment such as `// no break` when fall-through is intentional in a non-empty `case` body.
 
@@ -345,7 +304,7 @@ switch ($expr) {
 ```
 
 
-### 5.3. `while`, `do while`
+### 4.3. `while`, `do while`
 
 A `while` statement looks like the following. Note the placement of parentheses, spaces, and braces.
 
@@ -365,7 +324,7 @@ do {
 } while ($expr);
 ```
 
-### 5.4. `for`
+### 4.4. `for`
 
 A `for` statement looks like the following. Note the placement of parentheses, spaces, and braces.
 
@@ -376,7 +335,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-### 5.5. `foreach`
+### 4.5. `foreach`
     
 A `foreach` statement looks like the following. Note the placement of parentheses, spaces, and braces.
 
@@ -387,7 +346,7 @@ foreach ($iterable as $key => $value) {
 }
 ```
 
-### 5.6. `try`, `catch`
+### 4.6. `try`, `catch`
 
 A `try catch` block looks like the following. Note the placement of parentheses, spaces, and braces.
 
@@ -403,7 +362,7 @@ try {
 ```
 
 
-## 6. Closures
+## 5. Closures
 
 Closures MUST be declared with a space after the `function` keyword, and a space before and after the `use` keyword.
 
@@ -495,12 +454,12 @@ $foo->bar(
 ```
 
 
-## 7. Comments and documentation blocks
+## 6. Comments and documentation blocks
 
 
-## 8. Exemple
+## 7. Exemple
 
-### 8.1. Class
+### 7.1. Class
 ```php
 <?php
 namespace Vendor\Package;
