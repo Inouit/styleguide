@@ -83,4 +83,4 @@ js/
 - Implicit return
 - Nested functions without ~parentheses~
 - Global variables
-- Avoid too Many dependencies
+- Avoid too many dependencies
