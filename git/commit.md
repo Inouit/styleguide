@@ -14,13 +14,14 @@ Any line of the commit message cannot be longer 100 characters! This allows the 
 
 Must be one of the following:
 
-feat: A new feature
-fix: A bug fix
-docs: Documentation only changes
-style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-refactor: A code change that neither fixes a bug or adds a feature
-test: Adding missing tests
-chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- feat: A new feature  
+- fix: A bug fix  
+- docs: Documentation only changes  
+- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- refactor: A code change that neither fixes a bug or adds a feature
+- test: Adding missing tests
+- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- data: Changes to content related files (database or images)
 
 ## Subject
 
