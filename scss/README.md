@@ -69,7 +69,7 @@ css/
 $valid-background: YellowGreen !default;
 
 .button-blue {
-  @extend %button;
+  @extend %button !optional;
   @include mixin(300px);
 
   display: relative; background-color: cyan;
@@ -107,6 +107,7 @@ $valid-background: YellowGreen !default;
 
 ## Do
 - `!default` variable declarations in components
+- `!optionnal` flag in components
 - Simple quotes
 - Use `rem` unit when needed
 - Lint files
