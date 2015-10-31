@@ -37,7 +37,7 @@ css/
 ```
 ## Code Sample
 
-```css
+``` Sass
 
 ////
 /// This is a poster comment.
@@ -66,6 +66,8 @@ css/
 /// @todo replace `blue` by a more descriptive name
 /// @ignore SassDoc don't generate documentation on selectors.
 
+$valid-background: YellowGreen !default;
+
 .button-blue {
   @extend %button;
   @include mixin(300px);
@@ -73,7 +75,7 @@ css/
   display: relative; background-color: cyan;
   font-size: 1.3em; font-weight: 2;
 
-  &:hover { background-color: DarkCyan; }
+  &:hover { background-color: $valid-background; }
   &::before { content: ">"; display: block; }
 
   > h3 { color: white; }
@@ -103,7 +105,8 @@ css/
 | $fw-semibold  | 500     |
 | $fw-bold      | 700     |
 
-## Use
+## Do
+- `!default` variable declarations in components
 - Simple quotes
 - Use `rem` unit when needed
 - Lint files
@@ -111,6 +114,6 @@ css/
 - Sass doc comments
 
 ## Don't
-- `!important` whenever possible
+- `!important` outside trumps
 - `#id` selector, no you don't. If needed use `[id='value']` instead (weighs as much as a class selector)
 - Keep `extends` on first level and don't over use them, check the css output.
